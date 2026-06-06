@@ -24,9 +24,9 @@ public class Main {
     public static char caesarChiffre(char c, int offset) {
 
         if (c >= 'A' && c <= 'Z') {
-            return (char) (c + offset);
+            return (char)('A' + (c - 'A' + offset) % 26);
         } else if (c >= 'a' && c <= 'z') {
-            return (char) (c + offset);
+            return (char)('a' + (c - 'a' + offset) % 26);
         } else {
             return c;
         }
